@@ -1,0 +1,5 @@
+from base85
+from base64
+from base32
+
+https://cryptoji.com, decrypt emoji
