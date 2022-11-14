@@ -1,0 +1,49 @@
+variables:
+    REMOTE_HOST: "ubuntu@ec2-18-183-185-15.ap-northeast-1.compute.amazonaws.com"
+    RUNNER_PATH: "/builds/ccsclub/sict-ctf/gitlab-runner-2049"
+
+stages:
+    - verify
+    - upload
+    - test
+
+before_script:
+    - 'command -v ssh-agent >/dev/null || apk add openssh-client'
+    - eval "$(ssh-agent -s)"
+    - echo "$SSH_PRIVATE_KEY" | ssh-add - > /dev/null
+    - mkdir -p ~/.ssh &&  chmod 700 ~/.ssh
+    - echo -e "Host *\n\tStrictHostKeyChecking no\n\tServerAliveInterval 120\n\n" > ~/.ssh/config
+
+verify gitlab runner:
+    stage: verify
+    before_script:
+        - ls -la && id && whoami && pwd
+    script:
+        - echo "successfully verified runner..."
+
+upload flag to server:
+    image: alpine:latest
+    before_script:
+        - 'command -v ssh-agent >/dev/null || apk add openssh-client'
+        - eval "$(ssh-agent -s)"
+        - echo "$SSH_PRIVATE_KEY" | ssh-add - > /dev/null
+        - mkdir -p ~/.ssh &&  chmod 700 ~/.ssh
+        - echo -e "Host *\n\tStrictHostKeyChecking no\n\tServerAliveInterval 120\n\n" > ~/.ssh/config
+    stage: upload
+    needs: ["verify gitlab runner"]
+    script:
+        - echo $FLAG > $RUNNER_PATH/flag.txt
+        - scp $RUNNER_PATH/flag.txt $REMOTE_HOST:/home/ubuntu/GitLab\ Runner\ 2049/flag
+    
+get flag:
+    image: docker:20.10.16
+    stage: test
+    services:
+        - docker:20.10.16-dind
+    needs: ["upload flag to server"]
+    script:
+        - scp $REMOTE_HOST:"/home/ubuntu/GitLab\ Runner\ 2049/flag" flag.txt
+        - docker login -u $CI_REGISTRY_USER -p $CI_REGISTRY_PASSWORD $CI_REGISTRY
+        - docker build -t $CI_REGISTRY/ccsclub/sict-ctf/gitlab-runner-2049:latest .
+        - docker push $CI_REGISTRY/ccsclub/sict-ctf/gitlab-runner-2049:latest
+
