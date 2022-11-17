@@ -1,0 +1,1 @@
+compare_flag list-ыг куб язгуур аваад reverse хийгээд 'Q' тэй XOR үйлдэл хийхэд flag гарна. 
