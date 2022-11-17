@@ -1,0 +1,7 @@
+
+Challange: qrmenu.mn domain-ны серверийн үндсэн IP хаягийг олоход туслаач.
+
+Hints 1: What is CloudFlare ? 
+Hints 2: Searching engines ?
+
+Author: Alisa
