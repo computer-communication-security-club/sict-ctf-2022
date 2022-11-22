@@ -1,0 +1,1 @@
+flag{delphi_aint_got_nothin_on_printf}
