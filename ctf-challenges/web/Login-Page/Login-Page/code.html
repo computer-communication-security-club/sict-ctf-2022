@@ -1,0 +1,37 @@
+<meta charset="UTF-8">
+<!-- 
+<?php
+
+if (isset($_GET['passwd'])) {
+
+        if (hash("md5", $_GET['passwd']) == '00e45653718969294213009554265803'){
+            echo "<h1>Амжилттай. Та үнэхээр мундаг юм аа ^^ Энэ бол таны туг :</h1>".$flag;
+        } else {
+            echo "Ийм амархан орохгүй шүү ^.^";
+    }
+}
+?>
+ -->
+
+
+<script>
+	
+	document.onkeydown = function(e) {
+    if(e.keyCode == 123) {
+     return false;
+    }
+    if(e.ctrlKey && e.shiftKey && e.keyCode == 'I'.charCodeAt(0)){
+     return false;
+    }
+    if(e.ctrlKey && e.shiftKey && e.keyCode == 'J'.charCodeAt(0)){
+     return false;
+    }
+    if(e.ctrlKey && e.keyCode == 'U'.charCodeAt(0)){
+     return false;
+    }
+
+    if(e.ctrlKey && e.shiftKey && e.keyCode == 'C'.charCodeAt(0)){
+     return false;
+    }      
+ }
+</script>

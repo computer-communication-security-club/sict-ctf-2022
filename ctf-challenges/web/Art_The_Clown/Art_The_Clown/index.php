@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<head>
+<meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+</head>
+<body>
+<h1>Хөрвүүлэгч</h1>
+<form action="clown.php" style="text-align:center; margin-top:300px;" >
+  <textarea id="terrifier" name="terrifier" rows="10" cols="100"></textarea>
+  <br><br>
+  <input type="submit" value="🤡">
+</form>
+<marquee><p style="color:red; font-weight:bold">Last words before you die?</p></marquee>
+</body>
+</html>
+
+
+<style>
+body {
+  padding: 0px;
+  margin: 0px;
+  background-color: black;
+  text-align: center;
+  position: absolute;
+  top: 0px;
+  bottom: 0px;
+  left: 0px;
+  right: 0px;
+  overflow: hidden;
+  color: black;
+}
+
+#circus {
+  position: absolute;
+  left: 50%;
+  margin-left: -150px;
+  top: 10px;
+  height: 300px;
+  width: 300px;
+  box-shadow: inset 0 0 10px hotpink;
+  transition: all 5s ease-in;
+}
+
+#circus:hover {
+}
+
+#hat {
+  position: relative;
+  margin: 50px auto 0px auto;
+  background-color: cornflowerblue;
+  height: 100px;
+  width: 50px;
+  overflow: hidden;
+  z-index: 1000;
+}
+
+#circus:hover #hat {
+  background-color: purple;
+}
+
+#circus:hover #poof {
+  background-color: red;
+}
+
+#poof {
+  -webkit-filter: blur(5px);
+  filter: blur(5px);
+  position: absolute;
+  height: 20px;
+  width: 20px;
+  border-radius: 50%;
+  margin-top: 50px;
+  background-color: lightyellow;
+  left: 50%;
+  margin-left: -10px;
+  z-index: 10000;
+}
+
+#left, #right {
+  height: 180px;
+  width: 50px;
+  position: absolute;
+  background-color: black;
+  bottom: 0px;
+  z-index: 10000;
+}
+
+#left {
+  margin-left: -50px;
+  transform-origin: bottom right;
+  transform: rotateZ(15deg);
+}
+
+#right {
+  margin-left: 50px;
+  transform-origin: bottom left;
+  transform: rotateZ(-15deg);
+}
+
+.spot {
+  border-radius: 50%;
+  display: block;
+  height: 15px;
+  width: 15px;
+  background-color: yellow;
+  margin: 15px auto;
+  position: relative;
+  z-index: 10;
+  box-shadow: inset 0 0 10px deeppink;
+  -webkit-filter: blur(2px);
+  filter: blur(2px);
+}
+
+#face {
+  height: 100px;
+  width: 100px;
+  background-color: white;
+  border-radius: 50%;
+  margin: -5px auto;
+  position: relative;
+  box-shadow: inset 0 0 20px lightcoral;
+}
+
+#circus:hover #face {
+  box-shadow: inset 0 0 20px darkgreen;
+}
+
+#nose {
+  height: 15px;
+  width: 15px;
+  background-color: red;
+  border-radius: 50%;
+  left: 50%;
+  top: 50%;
+  margin: -7.5px 0px 0px -7.5px;
+  position: absolute;
+}
+
+#circus:hover #nose {
+  background-color: darkslategrey !important;
+}
+
+#nose:before {
+  content: "";
+  position: absolute;
+  top: 10%;
+  left: 10%;
+  width: 90%;
+  height: 90%;
+  border-radius: 50%;
+  background: radial-gradient(circle at 20% 10%, #eeeeee, rgba(0, 0, 0, 0) 58%);
+  filter: blur(5px);
+  z-index: 2;
+}
+
+.eye {
+  height: 15px;
+  width: 15px;
+  background-color: royalblue;
+  border-radius: 50%;
+  position: absolute;
+  top: 25px;
+  left: 50%;
+  margin-left: -30px;
+}
+
+.eye > div {
+  height: 10px;
+  width: 25px;
+  background-color: royalblue;
+  border-radius: 50%;
+  position: absolute;
+  margin-top: 2.5px;
+  margin-left: -5px;
+}
+
+.eye > div > div {
+  height: 10px;
+  width: 10px;
+  background-color: white;
+  border-radius: 50%;
+  position: absolute;
+  top: 0px;
+  left: 50%;
+  margin-left: -5px;
+  line-height: 15px;
+  font-size: 19px;
+  font-weight: 900;
+  vertical-align: middle;
+}
+
+.eye + .eye {
+  margin-left: 15px;
+}
+
+#hair {
+  height: 50px;
+  width: 120px;
+  background-color: transparent;
+  position: absolute;
+  left: 50%;
+  margin-left: -60px;
+  margin-top: 20px;
+}
+
+#hair div {
+  height: 25px;
+  width: 25px;
+  background-color: red;
+  border-radius: 50%;
+  position: absolute;
+}
+
+#circus:hover #hair div {
+  background-color: darkred;
+  box-shadow: inset 0 0 10px black;
+}
+
+#hair > div {
+  top: -10px;
+  left: -5px;
+}
+
+#hair div + div {
+  top: 0px;
+  left: -10px;
+}
+
+#hair div + div + div {
+  top: 10px;
+  left: -12px;
+}
+
+#hair div + div + div + div {
+  top: 30px;
+  left: -5px;
+}
+
+#hair div + div + div + div + div {
+  top: -10px;
+  left: 100px;
+}
+
+#hair div + div + div + div + div + div {
+  top: 0px;
+  left: 105px;
+}
+
+#hair div + div + div + div + div + div + div {
+  top: 10px;
+  left: 107px;
+}
+
+#hair div + div + div + div + div + div + div + div {
+  top: 30px;
+  left: 100px;
+}
+
+span {
+  display: block;
+  position: absolute;
+  width: 20px;
+  height: 10px;
+  box-shadow: 0 -2px 0 1px black !important;
+  border-radius: 100% !important;
+  background-color: transparent !important;
+  margin-top: -5px;
+  margin-left: -2px;
+}
+
+#circus:hover .eye,
+#circus:hover .eye + .eye,
+#circus:hover .eye div,
+#circus:hover .eye + .eye div {
+  border: solid 1px black;
+  box-shadow: 0 0 5px darkgreen;
+  color:red !important;
+}
+
+
+#circus:hover .eye,
+#circus:hover .eye span {
+  transform-origin: right;
+  transform: rotateZ(30deg);
+}
+
+
+#circus:hover .eye + .eye,
+#circus:hover .eye + .eye span {
+  transform-origin: left;
+  transform: rotateZ(-30deg);
+}
+
+#mouth {
+  width: 40px;
+  height: 10px;
+  border-radius: 50%;
+  position: absolute;
+  box-shadow: 0 5px 0 1px red !important;
+  border-radius: 100% !important;
+  background-color: transparent !important;
+  left: 50%;
+  margin-left: -20px;
+  top: 60px;
+}
+
+#mouth div {
+  height: 10px;
+  width: 10px;
+  background-color: red;
+  border-radius: 50%;
+  position: absolute;
+  margin-top: 5px;
+  margin-left: -5px;
+}
+
+#mouth div + div {
+  margin-top: 5px;
+  margin-left: 35px;
+}
+
+#circus:hover #mouth {
+  border: solid 5px maroon;
+  box-shadow: inset 0 0 1px maroon !important;
+  background-color: black !important;
+  margin-left: -25px;
+  margin-top: 5px;
+}
+
+#circus:hover #mouth div {
+  display: none;
+}
+
+
+</style>
+
+<div id="circus">
+  <div id="poof"></div>
+  <div id="hat">
+    <div id="left"></div>
+    <div id="right"></div>
+    <div class="spot"></div>
+    <div class="spot"></div>
+    <div class="spot"></div>
+  </div>
+  <div id="hair">
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+  </div>
+  <div id="face">
+    <div class="eye">
+      <span></span>
+      <div>
+        <div>*</div>
+      </div>
+    </div>
+    <div class="eye">
+      <span></span>
+      <div>
+        <div>*</div>
+      </div>
+    </div>
+    <div id="nose"></div>
+    <div id="mouth">
+      <div></div>
+      <div></div>
+    </div>
+  </div>
+</div>
+
+</style>
