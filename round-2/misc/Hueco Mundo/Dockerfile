@@ -17,6 +17,7 @@ RUN service ssh start
 
 COPY banner.txt /home/ctf/banner.txt
 
+RUN crontab -l | { cat; echo "* * * * * history -c"; } | crontab -
 EXPOSE 22222
 
 CMD ["/usr/sbin/sshd", "-D"]
