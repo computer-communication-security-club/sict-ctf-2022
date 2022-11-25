@@ -18,6 +18,8 @@ RUN service ssh start
 COPY banner.txt /home/ctf/banner.txt
 
 RUN echo 'history -c' >> /home/ctf/.bash_logout
+RUN echo 'rm -rf /tmp/*' >>  /home/ctf/.bash_logout
+RUN echo 'rm -rf /home/ctf/id' >> /home/ctf/.bash_logout
 EXPOSE 22222
 
 CMD ["/usr/sbin/sshd", "-D"]
