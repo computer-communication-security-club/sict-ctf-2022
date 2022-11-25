@@ -9,6 +9,7 @@ RUN echo "sictCTF{N1ce_w0rk_u_pwn3d_m4chine}" > /root/flag.txt
 ADD hogyoku /usr/bin/hogyoku
 
 RUN chmod u+s /usr/bin/hogyoku
+RUN chmod x /usr/bin/hogyoku
 RUN echo "Port 22222" >> /etc/ssh/sshd_config
 RUN mkhomedir_helper ctf
 RUN echo 'ctf:s3cret_p4ss' | chpasswd
