@@ -48,3 +48,4 @@
 
 Welcome to Hueco Mundo
 Only Espadas can see flag. U are Adjuchas
+Flag location /root/flag.txt
