@@ -2,7 +2,7 @@ FROM ubuntu:20.04
 
 ENV DEBIAN_FRONTEND noninteractive
 
-RUN apt-get update && apt-get install openssh-server -y 
+RUN apt-get update && apt-get install openssh-server crontab -y 
 RUN groupadd -r ctf && useradd -r -g ctf -s /bin/bash -u 1000 ctf
 
 RUN echo "sictCTF{N1ce_w0rk_u_pwn3d_m4chine}" > /root/flag.txt
