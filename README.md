@@ -10,10 +10,10 @@
 
 Уг тэмцээний финалын болон эхний шатанд орж ирсэн бодлогуудын эхийг Public болгож байна. Сервис шаардлагатай бодлогонуудын Dockerfile өгөгдсөн тул локал дээрээ ажиллуулан туршиж үзэх боломжтой гэдгийг дуулгая.
 
-Зорилго:
+Зохион байгуулагч:
 ----------
-<a href="http://ctf.sict-ccs.club/"><img align="left" src="images/ccs.png" alt="CCS" width="50px"/></a>
-<a href="https://www.sict.edu.mn/"><img align="left" src="https://www.sict.edu.mn/static/assets/img/logo/logo.png" alt="MUST-SICT" width="50px"/></a>
+<a href="http://ctf.sict-ccs.club/"><img align="left" src="images/ccs.png" alt="CCS" width="45px"/></a>  
+<a href="https://www.sict.edu.mn/"><img align="center" src="images/sict.png" alt="MUST-SICT" width="200px"/></a>
 
 Сошиал хаягууд:
 ----------
