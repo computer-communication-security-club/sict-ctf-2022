@@ -1,7 +1,7 @@
 # SICT CTF - 2022: Challenges
 
 <p align="center">
-<img src="images/ccs.png" height=250px width=170px>
+<img src="images/logo-no-background.png.png" height=250px width=170px>
 </p>
 
 Зорилго:
