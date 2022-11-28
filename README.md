@@ -13,4 +13,4 @@
 Сошиал хаягууд:
 ----------
 <a href="https://instagram.com/ccsecurity_club"><img align="left" src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e7/Instagram_logo_2016.svg/768px-Instagram_logo_2016.svg.png" alt="Instagram" width="50px"/></a>
-<a href="https://www.facebook.com/CCSclub2020"><img align="left" src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/05/Facebook_Logo_%282019%29.png/1024px-Facebook_Logo_%282019%29.png" alt="Facebook" width="50px"/></a>
+<a href="https://www.facebook.com/CCSclub2022"><img align="left" src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/05/Facebook_Logo_%282019%29.png/1024px-Facebook_Logo_%282019%29.png" alt="Facebook" width="50px"/></a>
