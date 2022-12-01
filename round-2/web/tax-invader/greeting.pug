@@ -1,0 +1,23 @@
+h1 Super Simple Tax Invasion
+h1 Hello! What's up buddy
+
+form(method='GET' action='/')
+  div.form-group
+    label(for='name') Name:
+    input#name.form-control(type='text', placeholder='Input your name here' name='name')
+  button.btn.btn-primary(type='submit') Submit 
+mixin img-bg(src, alt)
+ img.img-bg(
+   src=src,
+   style=`background-image: url('${src}')`,
+   alt=alt
+  )&attributes(attributes)
+ 
+figure
+  +img-bg(
+    "https://m.media-amazon.com/images/I/71lnZ+JjgKL._AC_UF894,1000_QL80_.jpg", 
+    "image"
+  )(class="additional-class")
+  
+  figcaption 
+  
